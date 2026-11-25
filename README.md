@@ -1,94 +1,120 @@
-Education Management and Tracking System (EMTS)
-A Full-Stack MERN-based Education Management System with AI-powered features and real-time communication.
+<!-- styled:v2 -->
+<div align="center">
 
-📌 Project Overview
-The Education Management and Tracking System (EMTS) is a comprehensive school management solution designed for teachers, students, parents, and administrators. It includes features such as attendance management, fee tracking, chat system, AI-based student reports, and role-based dashboards.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1d1726,50:167dfe,100:9533fa&height=180&section=header&text=Education%20Management%20%26%20Tracking%20System%20(EMTS)&fontSize=25&fontColor=ffffff&fontAlignY=36&desc=React%20%E2%80%A2%20Redux%20%E2%80%A2%20Node.js&descAlignY=58&descSize=16&animation=fadeIn" width="100%" alt="Education Management & Tracking System (EMTS)" />
 
-🚀 Features
-✅ Authentication (Login & Registration with Firebase)
+**A full-stack MERN school management system for admins, teachers, students and parents, with attendance, fees, chat and AI-written student reports.**
 
-✅ Role-Based Dashboards (Admin, Teacher, Student, Parent)
+<p>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Redux%20Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white" alt="Redux" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
+</p>
 
-✅ Attendance Management System
+<p>
+  <a href="#overview">Overview</a> ·
+  <a href="#how-it-works">How it works</a> ·
+  <a href="#features">Features</a> ·
+  <a href="#tech-stack">Tech stack</a> ·
+  <a href="#project-structure">Project structure</a> ·
+  <a href="#getting-started">Getting started</a>
+</p>
 
-✅ Fee Tracking & Payment Management
+</div>
 
-✅ Chat System (Teacher-Admin, Student-Parent)
+---
 
-✅ AI-Based Student Performance Reports
+## Overview
 
-✅ Admin-Teacher Communication System
+Schools juggle attendance sheets, fee records and parent messages across paper and WhatsApp. EMTS puts them in one web app with a separate dashboard for every role, real-time chat and AI-generated performance reports for each student.
 
-✅ Parent Monitoring System
+## Features
 
-✅ Real-Time Notifications
+| Role | What they can do |
+|:--|:--|
+| 🛡️ **Admin** | Manage teachers, students and classes, track fees, message teachers |
+| 👩‍🏫 **Teacher** | Mark attendance, record results, chat with admin and parents |
+| 🎓 **Student** | See attendance, results and fee status |
+| 👪 **Parent** | Monitor their child's attendance and progress, chat with teachers |
 
-🛠️ Tech Stack
-Frontend:
-React.js (with Bootstrap & Tailwind CSS)
+- Login and registration with Firebase Authentication
+- Attendance management and fee tracking
+- Real-time chat and notifications (Firebase Firestore)
+- AI-based student performance reports
+- Role-based dashboards and protected routes
 
-Firebase Authentication
+## How it works
 
-React Router for Navigation
+```mermaid
+flowchart LR
+    U([Admin / Teacher /<br/>Student / Parent]) --> F[React + Redux<br/>frontend]
+    F --> A[Firebase Auth]
+    F --> B[Express API]
+    B --> M[(MongoDB)]
+    F --> C[(Firestore<br/>chat + notifications)]
+    B --> AI([AI student<br/>reports])
 
-Backend:
-Node.js & Express.js
+    classDef box fill:#1d1726,stroke:#167dfe,color:#e5e7eb
+    classDef ends fill:#2e1065,stroke:#9533fa,color:#ffffff
+    class F,A,B box
+    class U,M,C,AI ends
+```
 
-MongoDB (Mongoose ORM)
+## Tech stack
 
-Firebase Firestore (for Chat & Realtime Data)
+| Layer | Tools |
+|:--|:--|
+| Frontend | React, Redux Toolkit, React Router, Bootstrap, Tailwind CSS |
+| Backend | Node.js, Express, Mongoose |
+| Data | MongoDB, Firebase Firestore |
+| Auth | Firebase Authentication |
 
-AI-Based APIs (for Student Reports)
+## Project structure
 
-DevOps & Deployment:
-GitHub (Version Control)
+```
+├── backend/     # Express API: controllers, models, routes, index.js
+└── frontend/    # React app: pages, components, redux, firebase.js
+```
 
-Free Deployment: Netlify (Frontend) & Render/Heroku (Backend)
+## Getting started
 
-🏗️ Installation & Setup
-1️⃣ Clone the Repository
-sh
-Copy
-Edit
-git clone https://github.com/HBukhari202114/EMTS.git
-cd EMTS
-2️⃣ Install Dependencies
-sh
-Copy
-Edit
-cd backend
-npm install
+```bash
+cd backend && npm install
+cd ../frontend && npm install
+```
 
-cd ../frontend
-npm install
-3️⃣ Configure Environment Variables
-Create a .env file in the backend/ directory:
+Create `backend/.env`:
 
-env
-Copy
-Edit
+```env
 MONGO_URL=your_mongodb_connection_string
 FIREBASE_API_KEY=your_firebase_api_key
 PORT=5000
-4️⃣ Start the Application
-Start Backend Server
-sh
-Copy
-Edit
-cd backend
-npm start
-Start Frontend
-sh
-Copy
-Edit
-cd frontend
-npm start
-The project will run on http://localhost:3000 (frontend) and http://localhost:5000 (backend).
+```
 
-👨‍💻 Developer
-Hussnain Shah Bukhari
-🔗 GitHub: HBukhari202114
+```bash
+cd backend && npm start     # http://localhost:5000
+cd frontend && npm start    # http://localhost:3000
+```
 
+## License
 
-📜 License
-This project is open-source under the MIT License.
+MIT
+
+---
+
+<div align="center">
+
+**Built by [Ch Muhammad Samiullah](https://github.com/samiullah156-creator)** · AI Automation Engineer and Full-Stack Developer at [Lexvaxa](https://lexvaxa.com)
+
+<a href="https://github.com/samiullah156-creator"><img src="https://img.shields.io/badge/More%20projects-181717?style=for-the-badge&logo=github&logoColor=white" alt="More projects" /></a>
+<a href="https://lexvaxa.com/contact"><img src="https://img.shields.io/badge/Work%20with%20me-167dfe?style=for-the-badge&logo=googlecalendar&logoColor=white" alt="Work with me" /></a>
+<a href="https://www.linkedin.com/in/sami-lexvaxa/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+
+<sub>⭐ Star this repo if you found it useful</sub>
+
+</div>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:9533fa,50:167dfe,100:1d1726&height=110&section=footer" width="100%" alt="" />
